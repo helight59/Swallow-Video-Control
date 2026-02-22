@@ -1,0 +1,17 @@
+{
+  "name": "swallow-video-control",
+  "private": false,
+  "type": "module",
+  "scripts": {
+    "build": "npm run clean && npm run copy && tsc -p tsconfig.json && npm run zip-dist",
+    "watch": "npm run clean && npm run copy && tsc -p tsconfig.json --watch",
+    "clean": "node ./scripts/clean.mjs",
+    "copy": "node ./scripts/copy.mjs",
+    "zip-dist": "node ./scripts/zip-dist.mjs"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.1.37",
+    "@types/w3c-web-hid": "^1.0.6",
+    "typescript": "^5.9.3"
+  }
+}
