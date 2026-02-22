@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <style>
+      body { font-family: system-ui, sans-serif; width: 320px; margin: 12px; }
+      button { padding: 8px 10px; cursor: pointer; }
+      .row { margin-top: 10px; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; white-space: pre-wrap; }
+    </style>
+</head>
+<body>
+<img src="assets/icon/swallow_video_control_logo_256.png" width="64" height="64" alt="Swallow" />
+<div class="row">
+    <button id="connect">Connect HID</button>
+    <button id="disconnect">Disconnect</button>
+    <button id="hotkeys">Or set any hotkeys</button>
+</div>
+<div class="row mono" id="state">...</div>
+<script src="popup.js"></script>
+</body>
+</html>

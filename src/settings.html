@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Swallow Video Control Settings</title>
+    <style>
+      body { font-family: system-ui, sans-serif; margin: 16px; max-width: 760px; }
+      h2 { margin: 0 0 12px; }
+      .card { border: 1px solid rgba(0,0,0,.12); border-radius: 10px; padding: 12px; margin: 12px 0; }
+      .row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+      button { padding: 8px 10px; cursor: pointer; }
+      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; white-space: pre-wrap; }
+      .hint { opacity: .75; font-size: 12px; margin-top: 6px; }
+      .value { font-weight: 600; }
+      .spacer { height: 4px; }
+    </style>
+</head>
+<body>
+<h2>Settings</h2>
+
+<div class="card">
+    <div class="row">
+        <div class="value" id="hidStatus">HID: -</div>
+        <button id="connect">Connect HID</button>
+        <button id="disconnect">Disconnect</button>
+    </div>
+    <div class="hint">Click Connect HID and choose your keyboard or remote where Rewind and Fast Forward buttons are configured.</div>
+</div>
+
+<div class="card">
+    <div class="row">
+        <div class="value">Keyboard hotkeys</div>
+    </div>
+
+    <div class="spacer"></div>
+
+    <div class="card">
+        <div class="row">
+            <div style="min-width: 120px;">Rewind</div>
+            <div class="mono" id="rewindVal">-</div>
+            <button id="setRewind">Set</button>
+            <button id="clearRewind">Clear</button>
+        </div>
+        <div class="hint">Modifiers: Ctrl, Shift, Alt, Meta (Win/Cmd). Context Menu key is shown as Menu.</div>
+    </div>
+
+    <div class="card">
+        <div class="row">
+            <div style="min-width: 120px;">Forward</div>
+            <div class="mono" id="forwardVal">-</div>
+            <button id="setForward">Set</button>
+            <button id="clearForward">Clear</button>
+        </div>
+    </div>
+
+    <div class="mono" id="capture" style="margin-top: 10px;"></div>
+</div>
+
+<script src="settings.js"></script>
+</body>
+</html>
